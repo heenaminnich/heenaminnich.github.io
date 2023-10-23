@@ -10,6 +10,34 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			ul {
+				display: grid; 
+				grid-auto-columns: 1fr; 
+				grid-auto-rows: 1fr; 
+				grid-template-columns: 1fr 1fr 1fr; 
+				grid-template-rows: 1fr 1fr 1fr 1fr; 
+				gap: 0px 0px; 
+				grid-template-areas: 
+				  "col1-item1 col2-item1 col3-item1"
+				  "col1-item2 col2-item2 col3-item2";
+			  }
+			/* Assign a class to each li */
+			/* Column 1 */
+			.col1-item1 { grid-area: col1-item1; }
+			.col1-item2 { grid-area: col1-item2; }
+			/* Column 2 */
+			.col2-item1 { grid-area: col2-item1; }
+			.col2-item2 { grid-area: col2-item2; }
+			/* Column 3 */
+			.col3-item1 { grid-area: col3-item1; }
+			.col3-item2 { grid-area: col3-item2; }
+
+			.no-bullets {
+				list-style-type: none;
+			}
+			
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -30,7 +58,7 @@
 						<header class="major">
 							<h2>About Me</h2>
 						</header>
-						<p>I have a dual bachelor's degree in Electrical Engineering and Computer Engineering from Drexel University. I am currently pursuing a Master's in Computer Science from Old Dominion University, with an expected graduation in Spring of 2024. My thesis is on developing machine learning models to identify confirmed exoplanets from the NASA Kepler dataset.</p>
+						<p>I have a dual bachelor's degree in Electrical Engineering and Computer Engineering from Drexel University. I am currently pursuing a Master's in Computer Science from Old Dominion University, with an expected graduation in Spring of 2024. My thesis is on developing machine learning models to identify confirmed exoplanets from the NASA Kepler and TESS Mission light curve datasets.</p>
 						<!-- <ul class="actions">
 							<li><a href="#" class="button">Learn More</a></li>
 						</ul> -->
@@ -40,36 +68,38 @@
 					<section id="two">
 						<h2>Projects</h2>
 						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/01.jpg" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
-								<h3>Magna sed consequat tempus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
-								<h3>Ultricies lacinia interdum</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
-								<h3>Tortor metus commodo</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
-								<h3>Quam neque phasellus</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
-								<h3>Risus ornare lacinia</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
+							<ul>
+								<li class="col1-item1 no-bullets">
+									<a href="pages\projects\Airline_Satisfaction_Analysis.html" target="_blank" class="image fit thumb"><img src="images/thumbs/01.jpg" alt="" /></a>
+									<h3>Airline Customer Satisfaction</h3>
+									<p>Using a variety of statistical analysis methods, determine what changes the airline can make to improve customer satisfication.</p>
+								</li>
+								<li class="col1-item2 no-bullets">
+									<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/thumbs/02.jpg" alt="" /></a>
+									<h3>Ultricies lacinia interdum</h3>
+									<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								</li>
+								<li class="col2-item1 no-bullets">
+									<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/thumbs/03.jpg" alt="" /></a>
+									<h3>Tortor metus commodo</h3>
+									<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								</li>
+								<li class="col2-item2 no-bullets">
+									<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/thumbs/04.jpg" alt="" /></a>
+									<h3>Quam neque phasellus</h3>
+									<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								</li>
+								<li class="col3-item1 no-bullets">
+									<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/thumbs/05.jpg" alt="" /></a>
+									<h3>Nunc enim commodo aliquet</h3>
+									<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								</li>
+								<li class="col3-item2 no-bullets">
+									<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/thumbs/06.jpg" alt="" /></a>
+									<h3>Risus ornare lacinia</h3>
+									p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+								</li>
+							</ul>
 						</div>
 						<ul class="actions">
 							<li><a href="#" class="button">Full Portfolio</a></li>
@@ -438,8 +468,8 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 			<footer id="footer">
 				<div class="inner">
 					<ul class="icons">
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						<li><a href="https://www.linkedin.com/in/heena-minnich-4564a3100" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+						<li><a href="mailto: heenaminnich@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 					</ul>
 					<ul class="copyright">
 						<li>&copy; 2023</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
